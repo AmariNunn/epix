@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ApplicationDialog } from "@/components/ApplicationDialog";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { FancyButton } from "@/components/FancyButton";
+import { Button } from "@/components/ui/button";
 
 const experiences = [
   {

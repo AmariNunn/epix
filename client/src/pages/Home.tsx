@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ApplicationDialog } from "@/components/ApplicationDialog";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { FancyButton } from "@/components/FancyButton";
 
 export default function Home() {
   const fadeInUp = {
@@ -16,12 +17,12 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0E0E0E]">
+    <div className="min-h-screen bg-[#0E0E0E] relative">
+      <AnimatedBackground />
+      
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          {/* Unsplash abstract dark texture */}
-          {/* <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" alt="Abstract Background" className="w-full h-full object-cover opacity-30" /> */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#0E0E0E]/80 via-transparent to-[#0E0E0E] z-10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#6B0F1A]/20 via-transparent to-transparent z-0" />
         </div>
@@ -43,15 +44,15 @@ export default function Home() {
 
             <motion.div variants={fadeInUp} className="flex flex-col md:flex-row gap-6 justify-center items-center">
               <Link href="/experiences">
-                <Button className="bg-[#6B0F1A] hover:bg-[#8B1523] text-white px-8 py-6 rounded-none text-lg min-w-[200px]">
+                <FancyButton variant="primary" showArrow data-testid="button-enter-era">
                   Enter Your Epix Era
-                </Button>
+                </FancyButton>
               </Link>
               <ApplicationDialog 
                 trigger={
-                  <Button variant="outline" className="border-[#C9A24D] text-[#C9A24D] hover:bg-[#C9A24D] hover:text-[#0E0E0E] px-8 py-6 rounded-none text-lg min-w-[200px] bg-transparent">
+                  <FancyButton variant="outline" data-testid="button-book-experience">
                     Book an Experience
-                  </Button>
+                  </FancyButton>
                 }
               />
             </motion.div>
@@ -154,9 +155,9 @@ export default function Home() {
           
           <div className="text-center mt-16">
             <Link href="/shop">
-              <Button className="bg-[#C9A24D] hover:bg-[#B08D3F] text-[#0E0E0E] px-10 py-6 text-lg rounded-none">
+              <FancyButton variant="gold" showArrow data-testid="button-start-reset">
                 Start The Reset — $97
-              </Button>
+              </FancyButton>
             </Link>
           </div>
         </div>

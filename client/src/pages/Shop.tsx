@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { FancyButton } from "@/components/FancyButton";
 
 export default function Shop() {
   const { toast } = useToast();
@@ -15,7 +16,8 @@ export default function Shop() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0E0E0E] pt-32 pb-20">
+    <div className="min-h-screen bg-[#0E0E0E] pt-32 pb-20 relative">
+      <AnimatedBackground />
       <div className="container max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
@@ -48,12 +50,15 @@ export default function Shop() {
                ))}
              </ul>
 
-             <Button 
+             <FancyButton 
               onClick={handlePurchase}
-              className="w-full bg-[#6B0F1A] hover:bg-[#8B1523] text-white py-6 rounded-none text-lg"
+              variant="primary"
+              showArrow
+              className="w-full"
+              data-testid="button-purchase"
             >
                Purchase Now
-             </Button>
+             </FancyButton>
           </motion.div>
 
           <motion.div

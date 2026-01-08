@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ApplicationDialog } from "@/components/ApplicationDialog";
-import { Button } from "@/components/ui/button";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
+import { FancyButton } from "@/components/FancyButton";
 
 const experiences = [
   {
@@ -28,8 +29,9 @@ const experiences = [
 
 export default function Experiences() {
   return (
-    <div className="min-h-screen bg-[#0E0E0E] pt-32 pb-20">
-      <div className="container mx-auto px-6">
+    <div className="min-h-screen bg-[#0E0E0E] pt-32 pb-20 relative">
+      <AnimatedBackground />
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -5,6 +5,7 @@ import { useCreateSubscriber } from "@/hooks/use-subscribers";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 export function Footer() {
   const { mutate, isPending } = useCreateSubscriber();
@@ -53,17 +54,17 @@ export function Footer() {
             <div>
               <h4 className="font-serif text-[#C9A24D] mb-4">Explore</h4>
               <ul className="space-y-2 text-sm text-[#F6F1EB]/60">
-                <li className="hover:text-[#F6F1EB] cursor-pointer">About</li>
-                <li className="hover:text-[#F6F1EB] cursor-pointer">Experiences</li>
-                <li className="hover:text-[#F6F1EB] cursor-pointer">Shop</li>
+                <li><Link href="/about" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-about">About</Link></li>
+                <li><Link href="/experiences" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-experiences">Experiences</Link></li>
+                <li><Link href="/shop" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-shop">Shop</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-serif text-[#C9A24D] mb-4">Connect</h4>
               <ul className="space-y-2 text-sm text-[#F6F1EB]/60">
-                <li className="hover:text-[#F6F1EB] cursor-pointer">Instagram</li>
-                <li className="hover:text-[#F6F1EB] cursor-pointer">LinkedIn</li>
-                <li className="hover:text-[#F6F1EB] cursor-pointer">Email</li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-instagram">Instagram</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-linkedin">LinkedIn</a></li>
+                <li><a href="mailto:hello@epixera.com" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-email">Email</a></li>
               </ul>
             </div>
           </div>

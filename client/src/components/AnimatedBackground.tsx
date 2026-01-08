@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Plane } from "lucide-react";
+import logoImage from "@assets/88A518D3-7625-49B7-98A2-1C5F1B5906B1_1767910408682.png";
 
 const planes = [
   { id: 1, startY: "15%", duration: 8, delay: 0 },
@@ -10,6 +11,16 @@ const planes = [
 export function AnimatedBackground() {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+      <div 
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `url(${logoImage})`,
+          backgroundSize: "400px",
+          backgroundPosition: "center",
+          backgroundRepeat: "repeat",
+        }}
+      />
+      
       {planes.map((plane) => (
         <motion.div
           key={`plane-${plane.id}`}

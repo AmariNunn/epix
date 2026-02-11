@@ -5,6 +5,7 @@ import { ApplicationDialog } from "@/components/ApplicationDialog";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { FancyButton } from "@/components/FancyButton";
 import heroImage from "@assets/IMG_9304_1770812530437.jpeg";
+import secondaryImage from "@assets/IMG_9335_1770812540409.jpeg";
 
 export default function Home() {
   const fadeInUp = {
@@ -101,9 +102,10 @@ export default function Home() {
           >
             <div className="aspect-[3/4] overflow-hidden bg-white/5 relative group">
               <img 
-                src="https://images.unsplash.com/photo-1493606274436-5388c42289eb?q=80&w=2600&auto=format&fit=crop" 
-                alt="Minimalist Architecture" 
+                src={secondaryImage} 
+                alt="Epix Era Founder at Temple" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
+                data-testid="img-secondary-hero"
               />
               <div className="absolute inset-0 bg-[#0E0E0E]/20" />
             </div>

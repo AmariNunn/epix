@@ -88,7 +88,8 @@ export function ApplicationDialog({ trigger, defaultInterest = "General Inquiry"
           <Button 
             type="submit" 
             disabled={isPending}
-            className="w-full bg-[#6B0F1A] hover:bg-[#8B1523] text-white rounded-none h-12 mt-4"
+            className="w-full bg-[#DC2626] hover:bg-[#B91C1C] text-white rounded-none h-12 mt-4"
+            data-testid="button-submit-application"
           >
             {isPending ? "Submitting..." : "Submit Application"}
           </Button>

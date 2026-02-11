@@ -1,0 +1,100 @@
+# Epix Era Website — Revision Prompt
+
+## Overview
+These are updates to the existing Epix Era website. Please implement the following changes across the site.
+
+---
+
+## Global / Sitewide Changes
+
+- **Logo:** Add the Epix Era logo at the top of the site/header
+- **Buttons:** All CTA buttons ("Join," "Book," or any call-to-action) should be **red**
+- **Button Text:** Change "Join" to **"Meet Me"** everywhere it appears
+- **Word Change:** Change the word **"ticked"** to **"checked"** everywhere it appears
+
+---
+
+## Page 1 / Hero Section
+
+- **Hero Tagline:** *"For women entering their next chapter. Not a pivot. A masterpiece."*
+- **Secondary Tagline:** *"Where travel meets wholeness"*
+- **Hero Image:** Use the **playing cards photo** (see attached IMG_9304.jpeg — red dress, cards, embellished hat) as the primary first-page image
+- **Reset Button:** Make the reset button **red**
+
+---
+
+## Manifesto Page
+
+- **Image:** Use the **temple photo with umbrella** (see attached IMG_9411.JPG or IMG_9335.jpeg — traditional Thai outfit at Wat Arun with yellow parasol)
+
+---
+
+## Offerings Section — Reorder
+
+Reorder the offerings/packages as follows:
+1. **Reset Package** (move to 1st position, before the hoodie)
+2. *(Other existing offerings in current order)*
+3. **Proposal & Romance** (move to last position — should always be the final offering)
+
+- Include content/details for the **"Reset Package"** offering
+
+---
+
+## "Book an Experience" Section
+
+- **Rolling Video:** Add an auto-playing/looping video reel under "Book an Experience" showing who the brand owner is and what she does
+
+---
+
+## Solo Travel Section
+
+- **Rolling Reel:** Replace or add a looping video reel showcasing all the travel destinations visited (similar to an Instagram Reel format)
+
+---
+
+## Proposal & Romance Section
+
+- **Image:** Replace the current stock photo with either:
+  - A **heart** or something **red-themed**, OR
+  - A **man down on one knee** proposing
+- This section should be the **last offering** listed
+
+---
+
+## Connect / Social Tab
+
+- **Add social links** for:
+  - **TikTok**
+  - **YouTube**
+  *(in addition to any existing social links)*
+
+---
+
+## Attached Assets
+
+The following images were provided by the client for use on the site:
+
+1. **IMG_9304.jpeg** — Cards/casino themed photo (red dress, embellished hat, playing cards) → Use on **Page 1 / Hero**
+2. **IMG_9411.JPG** — Temple photo with yellow umbrella (sitting on ornate balcony at Wat Arun) → Use on **Manifesto page**
+3. **IMG_9335.jpeg** — Temple photo with yellow umbrella (full body, flowing outfit in front of Wat Arun spires) → Alternate temple photo option
+
+---
+
+## Summary Checklist
+
+- [ ] Epix Era logo at top
+- [ ] Red reset button
+- [ ] Updated hero tagline: "For women entering their next chapter. Not a pivot. A masterpiece."
+- [ ] "Where travel meets wholeness" tagline
+- [ ] Rolling video under "Book an Experience"
+- [ ] Change "ticked" → "checked"
+- [ ] Include Reset Package details
+- [ ] Temple umbrella pic on Manifesto page
+- [ ] Cards photo on Page 1
+- [ ] All CTA buttons → red
+- [ ] Add TikTok & YouTube under Connect tab
+- [ ] Change "Join" → "Meet Me"
+- [ ] Reset as 1st offering (before hoodie)
+- [ ] Proposal & Romance as last offering
+- [ ] Solo travel section → rolling reel of destinations
+- [ ] Proposal section → heart/red image or man on one knee

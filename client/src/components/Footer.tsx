@@ -25,7 +25,7 @@ export function Footer() {
     <footer className="bg-[#050505] pt-24 pb-12 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
         <div>
-          <h3 className="font-serif text-3xl md:text-4xl mb-6">Join the Inner Circle</h3>
+          <h3 className="font-serif text-3xl md:text-4xl mb-6">Meet Me in the Inner Circle</h3>
           <p className="text-[#F6F1EB]/60 mb-8 max-w-md font-light">
             Receive curated insights on designing your next chapter. No spam, only essence.
           </p>
@@ -39,9 +39,10 @@ export function Footer() {
             <Button 
               type="submit" 
               disabled={isPending}
-              className="bg-[#C9A24D] text-[#0E0E0E] hover:bg-[#B08D3F] rounded-none h-12 px-8 font-medium"
+              className="bg-[#DC2626] text-white hover:bg-[#B91C1C] rounded-none h-12 px-8 font-medium"
+              data-testid="button-meet-me"
             >
-              {isPending ? "Joining..." : "Join"}
+              {isPending ? "Sending..." : "Meet Me"}
             </Button>
           </form>
           {form.formState.errors.email && (
@@ -63,6 +64,8 @@ export function Footer() {
               <h4 className="font-serif text-[#C9A24D] mb-4">Connect</h4>
               <ul className="space-y-2 text-sm text-[#F6F1EB]/60">
                 <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-instagram">Instagram</a></li>
+                <li><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-tiktok">TikTok</a></li>
+                <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-youtube">YouTube</a></li>
                 <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-linkedin">LinkedIn</a></li>
                 <li><a href="mailto:hello@epixera.com" className="hover:text-[#F6F1EB] cursor-pointer transition-colors" data-testid="link-footer-email">Email</a></li>
               </ul>

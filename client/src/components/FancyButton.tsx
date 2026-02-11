@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 interface FancyButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "outline" | "gold";
+  variant?: "primary" | "outline" | "gold" | "red";
   className?: string;
   onClick?: () => void;
   showArrow?: boolean;
@@ -22,15 +22,17 @@ export function FancyButton({
   const baseStyles = "relative overflow-hidden px-8 py-4 text-lg font-medium tracking-wide uppercase transition-all duration-500 group cursor-pointer inline-flex items-center justify-center gap-3 min-w-[200px]";
 
   const variants = {
-    primary: "bg-[#6B0F1A] text-white border-2 border-[#6B0F1A]",
+    primary: "bg-[#DC2626] text-white border-2 border-[#DC2626]",
     outline: "bg-transparent text-[#C9A24D] border-2 border-[#C9A24D]",
     gold: "bg-[#C9A24D] text-[#0E0E0E] border-2 border-[#C9A24D]",
+    red: "bg-[#DC2626] text-white border-2 border-[#DC2626]",
   };
 
   const hoverVariants = {
-    primary: "hover:bg-transparent hover:text-[#6B0F1A]",
+    primary: "hover:bg-[#B91C1C] hover:border-[#B91C1C]",
     outline: "hover:bg-[#C9A24D] hover:text-[#0E0E0E]",
     gold: "hover:bg-transparent hover:text-[#C9A24D]",
+    red: "hover:bg-[#B91C1C] hover:border-[#B91C1C]",
   };
 
   return (

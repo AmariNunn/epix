@@ -4,6 +4,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { ApplicationDialog } from "@/components/ApplicationDialog";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { FancyButton } from "@/components/FancyButton";
+import heroImage from "@assets/IMG_9304_1770812530437.jpeg";
 
 export default function Home() {
   const fadeInUp = {
@@ -23,23 +24,33 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0E0E0E]/80 via-transparent to-[#0E0E0E] z-10" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#6B0F1A]/20 via-transparent to-transparent z-0" />
+          <img 
+            src={heroImage} 
+            alt="Epix Era - Playing Cards" 
+            className="w-full h-full object-cover object-top"
+            data-testid="img-hero"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0E0E0E]/70 via-[#0E0E0E]/40 to-[#0E0E0E] z-10" />
+          <div className="absolute inset-0 bg-[#0E0E0E]/30 z-5" />
         </div>
 
         <div className="container relative z-20 px-6 text-center">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.span variants={fadeInUp} className="block text-[#C9A24D] tracking-[0.3em] text-sm uppercase mb-6">
-              Welcome to The Epix Era™
+              Welcome to The Epix Era
             </motion.span>
             
-            <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium leading-tight mb-8">
-              Designing life <br/>
-              <span className="italic text-[#F6F1EB]/90">as an experience.</span>
+            <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl lg:text-8xl font-medium leading-tight mb-6 text-white">
+              For women entering <br/>
+              <span className="italic text-[#F6F1EB]/90">their next chapter.</span>
             </motion.h1>
 
-            <motion.p variants={fadeInUp} className="text-lg md:text-xl text-[#F6F1EB]/70 max-w-2xl mx-auto font-light mb-12">
-              For women entering their next chapter. Not a pivot. A masterpiece.
+            <motion.p variants={fadeInUp} className="text-2xl md:text-3xl text-[#F6F1EB]/90 max-w-2xl mx-auto font-serif italic mb-4">
+              Not a pivot. A masterpiece.
+            </motion.p>
+
+            <motion.p variants={fadeInUp} className="text-lg md:text-xl text-[#C9A24D] max-w-2xl mx-auto font-light mb-12 tracking-wide">
+              Where travel meets wholeness
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-col md:flex-row gap-6 justify-center items-center">
@@ -50,7 +61,7 @@ export default function Home() {
               </Link>
               <ApplicationDialog 
                 trigger={
-                  <FancyButton variant="outline" data-testid="button-book-experience">
+                  <FancyButton variant="primary" data-testid="button-book-experience">
                     Book an Experience
                   </FancyButton>
                 }
@@ -69,10 +80,10 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-serif text-4xl md:text-5xl mb-8">You’re not lost. <br/>You’re between chapters.</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-8">You're not lost. <br/>You're between chapters.</h2>
             <div className="w-24 h-px bg-[#C9A24D] mx-auto mb-8" />
             <p className="text-xl leading-relaxed text-[#F6F1EB]/80 font-light">
-              The old playbook doesn't work anymore. You've achieved the success, ticked the boxes, and yet there's a quiet whisper asking for <i>more</i>. Not more stuff. More depth. More feeling. More <span className="text-[#C9A24D]">you</span>.
+              The old playbook doesn't work anymore. You've achieved the success, checked the boxes, and yet there's a quiet whisper asking for <i>more</i>. Not more stuff. More depth. More feeling. More <span className="text-[#C9A24D]">you</span>.
             </p>
           </motion.div>
         </div>
@@ -88,7 +99,6 @@ export default function Home() {
             viewport={{ once: true }}
             className="order-2 md:order-1"
           >
-            {/* Unsplash minimalist architecture/texture */}
             <div className="aspect-[3/4] overflow-hidden bg-white/5 relative group">
               <img 
                 src="https://images.unsplash.com/photo-1493606274436-5388c42289eb?q=80&w=2600&auto=format&fit=crop" 
@@ -106,7 +116,7 @@ export default function Home() {
                transition={{ duration: 0.8 }}
                viewport={{ once: true }}
              >
-                <h2 className="font-serif text-4xl md:text-5xl mb-6">I don’t coach. <br/>I don’t hustle. <br/><span className="text-[#6B0F1A]">I curate.</span></h2>
+                <h2 className="font-serif text-4xl md:text-5xl mb-6">I don't coach. <br/>I don't hustle. <br/><span className="text-[#6B0F1A]">I curate.</span></h2>
                 <p className="text-[#F6F1EB]/70 mb-8 leading-relaxed">
                   We strip away the obligations that no longer serve you to reveal the masterpiece underneath. This isn't about fixing you. It's about revealing who you've always been waiting to become.
                 </p>
@@ -124,7 +134,7 @@ export default function Home() {
       <section className="py-32 bg-[#0E0E0E]">
         <div className="container max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl mb-4">The Epix Era Reset™</h2>
+            <h2 className="font-serif text-4xl md:text-5xl mb-4">The Epix Era Reset</h2>
             <p className="text-[#F6F1EB]/60">A foundational shift for the modern woman.</p>
           </div>
 
@@ -155,7 +165,7 @@ export default function Home() {
           
           <div className="text-center mt-16">
             <Link href="/shop">
-              <FancyButton variant="gold" showArrow data-testid="button-start-reset">
+              <FancyButton variant="primary" showArrow data-testid="button-start-reset">
                 Start The Reset — $97
               </FancyButton>
             </Link>

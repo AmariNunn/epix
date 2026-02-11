@@ -11,6 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import logoImg from "@assets/88A518D3-7625-49B7-98A2-1C5F1B5906B1_1767910366056.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -27,9 +28,7 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0E0E0E]/80 backdrop-blur-md border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/">
-          <span className="text-xl font-serif font-bold tracking-widest cursor-pointer text-[#F6F1EB] hover:text-[#C9A24D] transition-colors">
-            EPIX ERA
-          </span>
+          <img src={logoImg} alt="The Epix Era" className="h-14 w-auto cursor-pointer" data-testid="img-logo" />
         </Link>
 
         <div className="hidden md:flex items-center gap-12">

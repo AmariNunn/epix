@@ -3,14 +3,17 @@ import { ApplicationDialog } from "@/components/ApplicationDialog";
 import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { FancyButton } from "@/components/FancyButton";
 import { Button } from "@/components/ui/button";
+import { Check } from "lucide-react";
+import proposalImage from "@assets/proposal-romance.jpg";
 
 const experiences = [
   {
     id: 1,
-    title: "Proposal & Romance",
-    subtitle: "Orchestrated Intimacy",
-    description: "For moments that define a lifetime. We handle the logistics; you simply show up and fall in love all over again.",
-    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2940&auto=format&fit=crop"
+    title: "The Reset Package",
+    subtitle: "Your Foundation",
+    description: "A comprehensive reset experience designed for the woman ready to shed what no longer serves her. Includes a 30-day digital workbook, audio guidance modules, the 'Saying No' template library, and a vision casting framework. This is where your transformation begins.",
+    image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=2940&auto=format&fit=crop",
+    features: ["30-Day Digital Workbook", "Audio Guidance Modules", "The 'Saying No' Template Library", "Vision Casting Framework"]
   },
   {
     id: 2,
@@ -25,6 +28,13 @@ const experiences = [
     subtitle: "The Total Overhaul",
     description: "A 3-month immersion to redesign your environment, your habits, and your mindset. The ultimate investment in your future self.",
     image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=2940&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    title: "Proposal & Romance",
+    subtitle: "Orchestrated Intimacy",
+    description: "For moments that define a lifetime. We handle the logistics; you simply show up and fall in love all over again.",
+    image: proposalImage
   }
 ];
 
@@ -61,6 +71,7 @@ export default function Experiences() {
                     src={exp.image} 
                     alt={exp.title} 
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    data-testid={`img-experience-${exp.id}`}
                   />
                 </div>
               </div>
@@ -72,12 +83,21 @@ export default function Experiences() {
                 <p className="text-[#F6F1EB]/70 text-lg leading-relaxed mb-8 font-light">
                   {exp.description}
                 </p>
+                {exp.features && (
+                  <ul className="space-y-3 mb-8">
+                    {exp.features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-3 text-[#F6F1EB]/80">
+                        <Check className="w-4 h-4 text-[#C9A24D]" /> {feature}
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <ApplicationDialog 
                   defaultInterest={exp.title}
                   trigger={
-                    <Button variant="outline" className="border-[#F6F1EB]/20 text-[#F6F1EB] hover:bg-[#F6F1EB] hover:text-[#0E0E0E] px-8 py-6 rounded-none min-w-[180px]">
-                      Inquire Now
-                    </Button>
+                    <FancyButton variant="primary" data-testid={`button-inquire-${exp.id}`}>
+                      {exp.title === "The Reset Package" ? "Start The Reset" : "Inquire Now"}
+                    </FancyButton>
                   }
                 />
               </div>

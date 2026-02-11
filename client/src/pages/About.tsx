@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import templeImage from "@assets/IMG_9411_1770812535092.jpg";
 
 export default function About() {
   return (
@@ -18,12 +19,12 @@ export default function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
-            {/* Unsplash abstract portrait */}
             <div className="aspect-[3/4] bg-white/5 relative overflow-hidden">
                <img 
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2864&auto=format&fit=crop" 
-                alt="Portrait" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 opacity-80"
+                src={templeImage} 
+                alt="Epix Era Founder at Wat Arun Temple" 
+                className="w-full h-full object-cover hover:scale-105 transition-all duration-1000 opacity-90"
+                data-testid="img-manifesto"
               />
             </div>
           </div>
@@ -40,8 +41,8 @@ export default function About() {
             </p>
             
             <div className="pt-8 border-t border-white/10">
-              <h3 className="font-serif text-2xl text-white mb-2">Join me in the arena.</h3>
-              <p className="text-sm text-[#F6F1EB]/60">Founder, The Epix Era™</p>
+              <h3 className="font-serif text-2xl text-white mb-2">Meet me in the arena.</h3>
+              <p className="text-sm text-[#F6F1EB]/60">Founder, The Epix Era</p>
             </div>
           </div>
         </div>
